@@ -1,0 +1,24 @@
+<div> Choose a category from the list below: </div>
+
+
+<%= form_for @listing do |f| %>
+<%= f.collection_select :category_title, Category.all, :title, :title %><br><br>
+
+<%= f.label :title %>
+<%= f.text_field :title %><br>
+<%= f.label :company, "Company name (if Private please state your name):" %>
+<%= f.text_field :company %><br>
+<%= f.label :location, "Where:"%>
+<%= f.text_field :location %><br>
+<%= f.label :employment_type %>
+<%= f.text_field :employment_type %><br><br>
+<%= f.label :description %><br>
+<%= f.text_area :description %><br>
+<%= f.label :requirements %><br>
+<%= f.text_area :requirements %><br><br>
+<%= f.label :retribution, "Retribution (per month): $"%>
+<%= f.number_field :retribution %><br><br>
+
+
+<%= f.submit %>
+  <% end %>

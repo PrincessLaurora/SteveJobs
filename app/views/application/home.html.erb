@@ -1,0 +1,14 @@
+<h1>Job offers</h1>
+
+
+<h2>Search by category:</h2>
+
+<% @categories.each do |category| %>
+  <%= link_to category.title, category_path(category) %>
+<%end%>
+
+<h2>Or browse through the latest <%= link_to 'offers', listings_path%></h2>
+
+<div>
+  Are you an Employer? Post a job <%= link_to 'here', new_listing_path%></li>
+</div>
