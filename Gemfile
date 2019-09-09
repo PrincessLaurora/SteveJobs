@@ -24,7 +24,7 @@ gem 'jbuilder'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use ActiveModel has_secure_password
-gem 'bcrypt'
+
 
 gem 'devise'
 
@@ -36,7 +36,7 @@ gem 'omniauth-github'
 # gem 'unicorn'
 
 # Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
+gem 'capistrano-rails', group: :development
 
 group :development do
   gem 'rails_layout'
