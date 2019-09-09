@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
     resources :reports
     resources :responses
-    resources :user
+    resources :users
     resources :categories
     resources :listings
 
