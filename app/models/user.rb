@@ -21,5 +21,12 @@ class User < ActiveRecord::Base
     end
   end
 
+  def self.serialize_into_session(record)
+    [record.to_key.map(&:to_s), record.authenticatable_salt]
+  end
+
+  def self.serialize_into_cookie(record)
+    [record.to_key.map(&:to_s), record.rememberable_value]
+  end  
 
 end
